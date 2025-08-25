@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register & Pay</title>
+</head>
+<body>
+  <h1>Register & Pay</h1>
+
+  <!-- Registration Form -->
+  <form id="regForm" onsubmit="startPayment(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit">Proceed to Payment</button>
+  </form>
+
+  <script>
+    function startPayment(event) {
+      event.preventDefault();
+      // Redirect directly to Razorpay payment link
+      window.location.href = "https://rzp.io/l/yourpaymentlink";
+    }
+  </script>
+</body>
+</html>
 
